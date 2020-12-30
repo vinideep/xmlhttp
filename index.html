@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="action_page.html" name="form" id="form" method="GET">
+        <label for="fname">First name:</label>
+        <input type="text" id="fname" name="fname"><br><br>
+        <label for="lname">Last name:</label>
+        <input type="text" id="lname" name="lname"><br><br>
+        <input type="submit" value="Submit">
+    </form>
+    <script>
+        const fname = document.getElementById("fname");
+        const lname = document.getElementById("lname");
+        const form = document.getElementById("form");
+
+        form.addEventListener('submit',(e)=>{
+            // e.preventDefault();
+            validate();
+        })
+        function validate(){
+            if (fname.value === ""||lname.value === ""){
+                alert("enter firstname");
+            }
+    }   
+    </script>
+</body>
+</html>
